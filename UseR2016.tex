@@ -267,6 +267,41 @@ n.phe <- max((1:n)[temp])
 \end{frame}
 
 
+\begin{frame}[c]{More typically bad code}
+
+  \large
+      The {\hilit \tt scantwo()} function is {\hilit 1446 lines} long.
+
+      \bigskip \bigskip
+
+      The related C code is 20\% of the C code in R/qtl.
+
+
+\note{
+  This sort of thing really needs to be broken up into smaller pieces.
+
+  As it is, it's really hard to extend and maintain.
+}
+\end{frame}
+
+
+
+\begin{frame}[c]{Baroque data structures}
+
+  \large
+      {\tt attr(mycross\$geno[["X"]]\$probs, "map")}
+
+
+\note{
+  The data structures in R/qtl really got out of control: far too
+  deeply nested.
+
+  Attributes can be great, but when I learned about them, I started to
+  pile all sorts of shit in there.
+}
+\end{frame}
+
+
 
 \begin{frame}[c]{Summary}
 
