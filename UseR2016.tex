@@ -1,0 +1,101 @@
+\documentclass[12pt,t]{beamer}
+\usepackage{graphicx}
+\setbeameroption{hide notes}
+\setbeamertemplate{note page}[plain]
+\usepackage{listings}
+
+\input{header.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% end of header
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% title info
+\title{R/qtl: Just barely sustainable}
+\author{\href{http://kbroman.org}{Karl Broman}}
+\institute{Biostatistics \& Medical Informatics, UW{\textendash}Madison}
+\date{\href{http://kbroman.org}{\tt \scriptsize \color{foreground} kbroman.org}
+\\[-4pt]
+\href{https://github.com/kbroman}{\tt \scriptsize \color{foreground} github.com/kbroman}
+\\[-4pt]
+\href{https://twitter.com/kwbroman}{\tt \scriptsize \color{foreground} @kwbroman}
+\\[2pt]
+\scriptsize {\lolit Slides:} \href{http://bit.ly/UseR2016}{\tt \scriptsize
+  \color{foreground} bit.ly/UseR2016}
+}
+
+
+\begin{document}
+
+% title slide
+{
+\setbeamertemplate{footline}{} % no page number here
+\frame{
+  \titlepage
+
+  \vfill \hfill \includegraphics[height=6mm]{Figs/cc-zero.png} \vspace*{-1cm}
+
+  \note{These are slides for a talk that I will give at the UseR 2016
+    conference at Stanford on 28 June 2016.
+
+    Source: {\tt https://github.com/kbroman/Talk\_UseR2016} \\
+    Slides: {\tt http://bit.ly/UseR2016\_nonotes} \\
+    With notes: {\tt http://bit.ly/UseR2016}
+}
+} }
+
+
+
+
+\begin{frame}[c]{Summary}
+
+  \begin{itemize}
+  \itemsep12pt
+  \item Sustainable software
+    \bi
+    \item Easier if you use it for your own work
+    \ei
+  \item Take care of your users
+    \bi
+    \item Answer each question as if it's the first
+    \item Primary goal is to be helpful
+    \item Write many focused vignettes solving real problems
+    \ei
+  \item Version control
+  \item Tests
+  \end{itemize}
+
+  \note{
+    It's always good to include a summary.
+}
+\end{frame}
+
+\begin{frame}[c]{}
+
+\Large
+
+Slides: \href{http://bit.ly/UseR2016}{\tt bit.ly/UseR2016} \quad
+\includegraphics[height=5mm]{Figs/cc-zero.png}
+
+\vspace{10mm}
+
+\href{http://kbroman.org}{\tt kbroman.org}
+
+\vspace{10mm}
+
+\href{https://github.com/kbroman}{\tt github.com/kbroman}
+
+\vspace{10mm}
+
+\href{https://twitter.com/kwbroman}{\tt @kwbroman}
+
+
+\note{
+  Here's where you can find me, as well as the slides for this talk.
+}
+\end{frame}
+
+
+
+
+\end{document}
