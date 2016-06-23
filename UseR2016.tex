@@ -54,10 +54,15 @@
 \figw{Figs/rqtl_lines_code.pdf}{1.0}
 
 \note{
-  Growth of R/qtl over time. Currently about 60\% R code and 40\% C
-  code.
-}
+  I've been developing and maintaining an R package, R/qtl, since
+  2000. The idea was conceived the week before R version 1.0 was
+  released.
 
+  This plot shows the growth of R/qtl over time. It's currently about
+  60\% R code and 40\% C code.
+
+  The Rd files were basically constructed by hand. Oog.
+}
 \end{frame}
 
 
@@ -67,7 +72,8 @@
 \figw{Figs/inbredmice.jpg}{1.2}
 
 \note{
-I'll start with a bit of background.
+I'll start with a bit of background; hopefully I can get through this
+really quickly.
 
 I focus on genetics problems, and particularly on mouse genetics.
 
@@ -162,6 +168,12 @@ The figure on the right is from David Deen.
 
 \note{
   Back to this R/qtl package...
+
+  The goal was to have a comprehensive package for this sort of
+  genetic analysis in model organisms.
+
+  We were particularly interested in having it be flexible and
+  extendible: a platform for implementing new methods.
 }
 
 \end{frame}
@@ -177,7 +189,9 @@ The figure on the right is from David Deen.
 
   But there are good things in R/qtl: some of the code, much of the
   basic user interface design, it's comprehensive, there's lots of
-  good diagnostics data visualizations, and it seems to work.
+  good diagnostics data visualizations, and it can be quite flexible.
+
+  And it seems to work.
 }
 
 \end{frame}
@@ -191,7 +205,12 @@ The figure on the right is from David Deen.
   It's easier to identify bad things.
 
   It's remarkable that it works, because there are basically no
-  tests.
+  tests.  As we'll see, there's some really bad code, and lots of repeated
+  code. And I've had a lot of problems with memory management,
+  particularly in copying large data sets when passed from R to C. And
+  the code is full of if/else statements related to cross types. And
+  the data structures can be really complicated, and they've not been
+  well documented at all.
 }
 
 \end{frame}
@@ -217,8 +236,13 @@ n.phe <- max((1:n)[temp])
 \end{center}
 
 \note{
-  This is the stupidest code ever. See more discussion at
-  {\tt https://kbroman.wordpress.com/2011/08/17/the-stupidest-r-code-ever/}
+  This is the stupidest code ever.
+
+  It's basically trying to find the first non-blank element in a
+  vector of character strings.
+
+  See more discussion at
+  {\tt kbroman.wordpress.com/2011/08/17/the-stupidest-r-code-ever}
 }
 \end{frame}
 
