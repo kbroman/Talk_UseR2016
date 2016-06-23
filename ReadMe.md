@@ -1,7 +1,8 @@
 ### Talk on &ldquo;R/qtl: Just barely sustainable&rdquo;
 
 These are slides for a talk that I will give at the
-[UseR 2016](http://user2016.org) at Stanford on 28 June 2016.
+[UseR 2016 Conference](http://user2016.org) at Stanford (Palo Alto,
+California) on 28 June 2016.
 
 See them in action [here](https://www.biostat.wisc.edu/~kbroman/presentations/UseR2016.pdf).
 
