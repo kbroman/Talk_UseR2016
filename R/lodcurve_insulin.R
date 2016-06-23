@@ -71,10 +71,10 @@ mx <- max(out)
 mx.x <- xaxisloc.scanone(out, mx[[1]], mx[[2]])
 mx.y <- mx[[3]]
 for(y in yl)
-  segments(mx.x, mx.y, xl[1], y, lty=2, col=ifelse(bw, "gray20", "gray70"), lend=1, ljoin=1)
+  segments(mx.x, mx.y, xl[1], y, lty=2, col=ifelse(bw, "gray", "gray70"), lend=1, ljoin=1)
 xat <- seq(xl[1], xl[2], len=7)[c(2,4,6)]
 for(x in xat)
-    segments(x, yl[1], x, yl[2], lwd=5, col=ifelse(bw, "gray70", "gray20"), lend=1, ljoin=1)
+    segments(x, yl[1], x, yl[2], lwd=5, col=ifelse(bw, "gray90", "gray20"), lend=1, ljoin=1)
 text(xat, rep(yl[1]-yd*0.3, length(xat)), names(me))
 
 library(scales)
