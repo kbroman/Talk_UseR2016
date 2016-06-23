@@ -167,6 +167,107 @@ The figure on the right is from David Deen.
 \end{frame}
 
 
+\begin{frame}[c]{}
+
+\centerline{\Large Good things}
+
+\note{
+  After 15 years, it becomes hard to identify things that you like
+  about a software package.
+
+  But there are good things in R/qtl: some of the code, much of the
+  basic user interface design, it's comprehensive, there's lots of
+  good diagnostics data visualizations, and it seems to work.
+}
+
+\end{frame}
+
+
+\begin{frame}[c]{}
+
+\centerline{\Large Bad things}
+
+\note{
+  It's easier to identify bad things.
+
+  It's remarkable that it works, because there are basically no
+  tests.
+}
+
+\end{frame}
+
+\begin{frame}[c,fragile]{Stupidest code ever}
+
+\begin{center}
+\begin{minipage}[c]{9.3cm}
+\begin{semiverbatim}
+\lstset{basicstyle=\normalsize}
+\begin{lstlisting}[linewidth=9.3cm]
+n <- ncol(data)
+temp <- rep(FALSE,n)
+for(i in 1:n) {
+  temp[i] <- all(data[2,1:i]=="")
+  if(!temp[i]) break
+}
+if(!any(temp)) stop("...")
+n.phe <- max((1:n)[temp])
+\end{lstlisting}
+\end{semiverbatim}
+\end{minipage}
+\end{center}
+
+\note{
+  This is the stupidest code ever. See more discussion at
+  {\tt https://kbroman.wordpress.com/2011/08/17/the-stupidest-r-code-ever/}
+}
+\end{frame}
+
+
+\begin{frame}[c]{Input file}
+
+\figh{Figs/datafile.pdf}{0.6}
+
+\note{
+  This is what the basic input data file looks like. That last bit of
+  code was trying to find the first non-blank element in the second
+  line.
+
+  Users had reported that with lots of phenotypes, it was taking hours
+  to load their files. I thought, ``Well, you've got lots of
+  phenotypes.'' But then the first time that I had lots of phenotypes,
+  I realized there was a problem.
+
+  A file might take 60 seconds to load, and 58 of those seconds were
+  spent in trying to find the first non-blank character in the second
+  line. Urp.
+}
+
+\end{frame}
+
+
+\begin{frame}[c]{}
+
+  \large
+
+  {\hilit Open source} {\lolit means}
+
+  everyone can see my stupid mistakes
+
+  \bigskip \bigskip \bigskip
+
+  \onslide<2>{
+    {\hilit Version control} {\lolit means}
+
+  everyone can see every stupid mistake I've ever made
+}
+
+  \note{
+    They're both still totally worth it.
+    }
+\end{frame}
+
+
+
 \begin{frame}[c]{Summary}
 
   \begin{itemize}

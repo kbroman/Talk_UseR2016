@@ -1,6 +1,6 @@
 STEM = UseR2016
 
-FIGS = Figs/rqtl_lines_code.pdf Figs/intercross.pdf Figs/lodcurve_insulin.pdf
+FIGS = Figs/rqtl_lines_code.pdf Figs/intercross.pdf Figs/lodcurve_insulin.pdf Figs/datafile.pdf
 
 $(STEM).pdf: $(STEM).tex header.tex $(FIGS)
 	xelatex $<
@@ -31,3 +31,6 @@ Figs/intercross.pdf: R/intercross.R
 
 Figs/lodcurve_insulin.pdf: R/lodcurve_insulin.R
 	cd R;R CMD BATCH lodcurve_insulin.R
+
+Figs/datafile.pdf: R/datafile.R
+	cd R;R CMD BATCH datafile.R
