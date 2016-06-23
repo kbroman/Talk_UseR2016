@@ -49,6 +49,106 @@
 
 \figw{Figs/rqtl_lines_code.pdf}{1.0}
 
+\note{
+  Growth of R/qtl over time. Currently about 60\% R code and 40\% C
+  code.
+}
+
+\end{frame}
+
+
+\begin{frame}[c]{}
+
+\vspace*{-1mm} \hspace*{-2mm}
+\figw{Figs/inbredmice.jpg}{1.2}
+
+\note{
+I'll start with a bit of background.
+
+I focus on genetics problems, and particularly on mouse genetics.
+
+I think these are SWR mice; the photo is from David Threadgill.
+}
+
+\end{frame}
+
+
+\begin{frame}{}
+
+\vspace*{18mm}
+
+\centerline{
+\begin{minipage}[t]{50mm}
+\includegraphics[height=50mm]{Figs/da-vinci-man.jpg}
+\end{minipage}
+\hspace{15mm}
+\begin{minipage}[t]{50mm}
+\includegraphics[height=50mm]{Figs/vitruvian_mouse.jpg}
+\hspace{5mm}
+\href{http://daviddeen.com}{\scriptsize \lolit \tt daviddeen.com}
+\end{minipage}
+}
+
+
+\note{
+Mice are not humans, but you can learn a great deal about human
+biology and disease from mice.
+
+The figure on the right is from David Deen.
+}
+\end{frame}
+
+
+\begin{frame}[c]{Intercross}
+
+\figh{Figs/intercross.pdf}{1.0}
+
+\note{
+  I've mostly focused on simple crosses between two inbred strains.
+
+  Say strain P$_1$ has low blood pressure and P$_2$ has high blood
+  pressure. We cross the two strains to get the F$_1$ hybrid, and then
+  intercross F$_1$ siblings to get a large set of F$_2$
+  individuals.
+
+  The F$_2$ mice may inherit a P$_1$ or P$_2$ chromosome
+  intact, but generally their chromosomes are a mosaic of the two
+  parental chromosomes as a result of recombination at meiosis.  The
+  points of exchange are called crossovers or recombination events.
+
+  At any one autosomal locus, the F$_2$ individuals will have genotype
+  BB, BR, or RR. We'd generate many such mice and then determine their
+  genotype along chromosomes as well as measure their phenotype (e.g.,
+  blood pressure). The simplest analyis is to look for genomic regions
+  where genotype is associated with phenotype.
+}
+\end{frame}
+
+
+\begin{frame}[c]{QTL mapping}
+
+\vspace{5mm}
+\only<1 | handout 0>{\figh{Figs/lodcurve_insulin.pdf}{0.9}}
+\only<2>{\figh{Figs/lodcurve_insulin_with_effects.pdf}{0.9}}
+
+\note{
+  Our goal is to identify quantitative trait loci (QTL): regions of
+  the genome for which genotype is associated with the phenotype.
+
+  The basic analysis is to consider each locus, one at a time, split
+  the mice into the three genotype groups, and perform analysis of
+  variance.
+
+  We then plot a test statistic that indicates the strength of the
+  genotype-phenotype association.  For historical reasons, we
+  calculate a LOD score as the test statistic: the log$_{10}$
+  likelihood ratio comparing the hypothesis that there's a QTL at that
+  position to the null hypothesis of no QTL anywhere.
+
+  Large LOD scores indicate evidence for QTL and correspond to there
+  being a difference in the phenotype average for the three genotype
+  groups.
+}
 \end{frame}
 
 
