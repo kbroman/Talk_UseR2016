@@ -20,6 +20,11 @@ ifile.readlines.each do |z|
     do_2nd_sub = false
   end
 
+  # reverse-color versions of figures
+  if /\.pdf}/ =~ z
+      z = z.sub(".pdf", "_bw.pdf")
+  end
+
   ofile.write("\\def\\notescolors{1}\n") if /^\\input{/ =~ z # add line saying to use notes colors
 
   ofile.write(z)

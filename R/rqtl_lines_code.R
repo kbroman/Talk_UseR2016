@@ -8,9 +8,17 @@ lines <- lines[nrow(lines):1,]
 library(lubridate)
 lines[,2] <- dmy(as.character(lines[,2]))
 
+for(bw in c(FALSE, TRUE)) {
+
+if(bw) {
+pdf("../Figs/rqtl_lines_code_bw.pdf", width=10, height=6.5, pointsize=14)
+par(mar=c(3.6, 5.1, 2.3, 0.1),las=1,fg="black",col="black",col.axis="black",col.lab="slateblue",
+    bg="white",bty="n")
+} else {
 pdf("../Figs/rqtl_lines_code.pdf", width=10, height=6.5, pointsize=14)
 par(mar=c(3.6, 5.1, 2.3, 0.1),las=1,fg="white",col="white",col.axis="white",col.lab="lightblue",
     bg=bgcolor,bty="n")
+}
 
 yat <- seq(0, 35000, by=5000)
 
@@ -27,8 +35,8 @@ grayplot(lines[,2], lines[,3], xlab="", ylab="", yat=yat, xat=NA,
          mgp.x=c(1.6, 0.4, 0), vlines=xat, yaxs="i", vlines.col="gray65",
          hlines.col="white", bgcolor="gray85",
          xlim=range(xaxis), xaxs="i", mgp.y=c(3.3, 0.4, 0))
-title(xlab="Year", col.lab="lightblue", cex.lab=1.7, mgp=c(2,0,0))
-title(ylab="Lines of code", col.lab="lightblue", cex.lab=1.5, mgp=c(3.6,0,0))
+title(xlab="Year", col.lab=ifelse(bw, "slateblue", "lightblue"), cex.lab=1.7, mgp=c(2,0,0))
+title(ylab="Lines of code", col.lab=ifelse(bw, "slateblue", "lightblue"), cex.lab=1.5, mgp=c(3.6,0,0))
 for(i in 4:5)
   points(lines[,2], lines[,i], pch=21, col="black", bg=color2[i-2])
 
@@ -60,3 +68,4 @@ text(rep(x, 3), lines[nrow(lines),3:5], c("R", "C", "doc"),
      col=col, adj=c(0.5, 0.5), cex=1)
 
 dev.off()
+}

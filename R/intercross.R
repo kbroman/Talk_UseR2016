@@ -8,9 +8,18 @@ source("colors.R")
 
 color <- brocolors("crayons")[c("Cornflower", "Blush")]
 
+for(bw in c(FALSE, TRUE)) {
+
+
+if(bw) {
+pdf(file="../Figs/intercross_bw.pdf", width=10, height=7.5,
+    pointsize=14)
+par(fg="black", bg="white", bty="n")
+} else {
 pdf(file="../Figs/intercross.pdf", width=10, height=7.5,
     pointsize=14)
 par(fg="white", bg=bgcolor, bty="n")
+}
 
 plot(0,0,xlim=c(0,864),ylim=c(0,480),xaxt="n",yaxt="n",xlab="",ylab="",type="n")
 rect(c(300,328),c(480,480),c(310,338),c(385,385),col=color[1],border=color[1], lend=1, ljoin=1)
@@ -67,3 +76,4 @@ for(i in 1:10) {
 text(38-25,95/2,expression(F[2]),cex=2,adj=c(1,0.5))
 
 dev.off()
+}
