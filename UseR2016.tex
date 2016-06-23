@@ -326,6 +326,115 @@ n.phe <- max((1:n)[temp])
 \end{frame}
 
 
+\begin{frame}[c]{}
+
+  \only<1>{
+    \centerline{\Large User support}}
+
+  \only<2|handout 0>{
+    \centerline{\Large ``I tried X and it didn't work.''}}
+
+  \only<3|handout 0>{
+    \large ``Could you look at the attached 25-page Word
+      document containing code and output and tell me if I'm doing
+      something wrong?''}
+
+  \note{
+    It's great to have one's software used, but answering their
+    questions requires considerable patience.
+
+    Questions often have too little detail or far too much detail.
+
+    I'd hope to build a ``community'' of people answering each other's
+    questions, but it continues to be largely me doing the answering.
+
+    Part of that, I think, is due to the way I use Google Groups: I
+    filter all questions (to avoid spam), and in doing so, I tend to
+    then just answer the questions right away. So by the time that others see the
+    question, I've already answered it.
+
+    I try hard to be patient with, and to not be offended by, users
+    seeking help. I'll now often let things sit for a day or two
+    before answering.
+    }
+\end{frame}
+
+
+\begin{frame}[c]{}
+
+  \centerline{\Large Incorporating others' code}
+
+  \note{
+    It's great to get contributions from others. But once you've incorporated
+    their features, you're responsible for maintaining and supporting
+    it.
+
+    I now think that big things should mostly be made to be separate
+    packages.
+  }
+\end{frame}
+
+
+\begin{frame}[c]{}
+
+  \centerline{\Large Version control}
+
+  \note{
+    How on earth did I get by before git?
+
+    Really critical for incorporating others' changes, and for trying out
+    new things without breaking what's working.
+  }
+\end{frame}
+
+
+\begin{frame}[c]{}
+
+  \centerline{\Large Unit tests and TravisCI}
+
+  \note{
+    How on earth does any of this work?
+
+    I'm now thoroughly in love with unit tests and
+    Hadley's testthat.
+  }
+\end{frame}
+
+
+\begin{frame}[c]{R/qtl2: Let's not make the same mistakes}
+
+  \bbi
+\item C++ and Rcpp
+\item testthat
+\item A single ``switch'' for cross type
+\onslide<2>{
+\item Split into multiple packages
+\item Yet another data input format
+\item Flatter data structures, but still complex
+}
+\ei
+
+  \note{
+    I'm in the process of completing re-implementing R/qtl to better
+    handle high-dimensional data and more complex crosses.
+
+    Rcpp is totally awesome, as is testthat.
+
+    And I've designed things so that there's just one ``switch'' for
+    cross type (an object factory in C++).
+
+    But I had the idea to split the package into multiple packages,
+    and I'm not totally sure that was a good idea.
+
+    And I have yet another data input format, and I'm still fighting
+    to keep my data structures from being outlandish.
+
+    It seems to me that there's a trade-off in complexity of the user
+    interface and of the data structures.
+  }
+\end{frame}
+
+
 
 \begin{frame}[c]{Summary}
 
