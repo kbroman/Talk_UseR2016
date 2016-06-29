@@ -1,6 +1,6 @@
 ### Talk on &ldquo;R/qtl: Just barely sustainable&rdquo;
 
-These are slides for a talk that I will give at the
+These are slides for a talk that I gave at the
 [UseR 2016 Conference](http://user2016.org) at Stanford (Palo Alto,
 California) on 28 June 2016.
 
