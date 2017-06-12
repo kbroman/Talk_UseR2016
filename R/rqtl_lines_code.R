@@ -64,8 +64,8 @@ text(svn, txt, "svn", adj=c(0.5, 0), col=col)
 text(git, txt, "git", adj=c(0.5, 0), col=col)
 
 x <- (as.numeric(lines[nrow(lines),2])*0.45 + 0.55*par("usr")[2])
-text(rep(x, 3), lines[nrow(lines),3:5], c("R", "C", "doc"),
-     col=col, adj=c(0.5, 0.5), cex=1)
+    text(rep(x, 3) + c(0, 0, -40), lines[nrow(lines),3:5] + c(0,0,+1300),
+         c("R", "C", "doc"), col=col, adj=c(0.5, 0.5), cex=1)
 
 dev.off()
 }

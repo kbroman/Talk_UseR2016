@@ -1,3 +1,4 @@
+qtl_1.41-6.tar.gz  (11 Jun 2017)
 qtl_1.40-8.tar.gz  (31 Oct 2016)
 qtl_1.39-5.tar.gz  (4 Mar 2016)
 qtl_1.38-4.tar.gz  (3 Dec 2015)
