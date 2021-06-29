@@ -4,7 +4,11 @@ These are slides for a talk that I gave at the
 [UseR 2016 Conference](http://user2016.org) at Stanford (Palo Alto,
 California) on 28 June 2016.
 
-See them in action [here](https://www.biostat.wisc.edu/~kbroman/presentations/UseR2016.pdf).
+Slides pdf
+[here](https://www.biostat.wisc.edu/~kbroman/presentations/UseR2016.pdf).
+
+A [video of the talk](https://sec.ch9.ms/ch9/4472/abfcaf43-a51b-4041-a5fb-71eff9514472/D1LYONS3Broman_mid.mp4)
+is available.
 
 Also see the related paper, Broman KW (2014)
 [Fourteen years of R/qtl: Just barely sustainable](https://www.biostat.wisc.edu/~kbroman/publications/rqtl_14yrs.pdf). [J Open Res Softw](http://openresearchsoftware.metajnl.com/)
